@@ -27,22 +27,31 @@ let attempt = 0;
 function checkInput() {
   event.preventDefault();
   let num = document.getElementById("input_number").value;
-  if (num == randomNumber) {
-    previousScore++;
-    attempt++;
-    localStorage.setItem("score", previousScore);
-    document.getElementById("score").innerText = `Score: ${previousScore}`;
-    alert(`Congratulation! You have guessed in ${attempt}`);
-    window.location.reload();
-  } else if (num < randomNumber) {
-    document.getElementById(
-      "output"
-    ).innerText = `The number is greater then ${num}`;
-    attempt++;
-  } else if (num > randomNumber) {
-    document.getElementById(
-      "output"
-    ).innerText = `The number is less then ${num}`;
-    attempt++;
+  if (attempt == 6) {
+    alert("No More Attempts Ramain! Try again.");
+    return 0;
+  } else {
+    if (num == randomNumber) {
+      previousScore++;
+      attempt++;
+      localStorage.setItem("score", previousScore);
+      document.getElementById("score").innerText = `Score: ${previousScore}`;
+      alert(`Congratulation! You have guessed in ${attempt} Attepmts.`);
+      window.location.reload();
+    } else if (num < randomNumber) {
+      attempt++;
+      document.getElementById(
+        "output"
+      ).innerText = `The number is greater then ${num}, ${
+        6 - attempt
+      } Attepmts Remain.`;
+    } else if (num > randomNumber) {
+      attempt++;
+      document.getElementById(
+        "output"
+      ).innerText = `The number is less then ${num}, ${
+        6 - attempt
+      } Attepmts Remain.`;
+    }
   }
 }
