@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div>
+            <h1>Guess The Number</h1>
+            <span>
+                <p>By Rohan Mourya</p>
+            </span>
+        </div>
+        <div>
+            <p id="attempts">Attempts: 0</p>
+            <p id="score">Score: 0</p>
+        </div>
+    </div>
+    <section class="main m-auto">
+        <div>
+            <div class="heading m-auto">
+                <h3>Welcome To Guess The Number</h3>
+            </div>
+            <div>
+                <div class="padd-20px">
+                    <p>Range of Number</p>
+                </div>
+                <div>
+                    <form id="range">
+                        <label for="from">From:</label>
+                        <input type="text" placeholder="1" id="from" required>
+                        <label for="to">To:</label>
+                        <input type="text" id="to" placeholder="100" required> <br>
+                        <input type="submit" value="Start">
+                    </form>
+                </div>
+            </div>
+            <div class="padd-20px">
+                <p id="output" class="padd-20px"></p>
+                <form id="input">
+                    <input type="text" id="input_number" required>
+                    <input type="submit" value="Guess">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="main m-auto" style="text-align: left;">
+        <div>
+            <h4 style="padding: 10px 0px 20px 0;">--> Insturction</h4>
+            <ul>
+                <li>Enter the range of numbers you want the random number to be between</li>
+                <li>Enter your guess</li>
+                <li>See if your guess is too high or too low</li>
+                <li>Change your guess</li>
+                <li>The computer will tell you how many guesses you had</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
+<script src="main.js"></script>

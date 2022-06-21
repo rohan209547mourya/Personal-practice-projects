@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr: white;
+    --paddg-20: 20px;
+}
+
+body {
+    background-color: rgb(246, 246, 246);
+}
+
+.padd-20px {
+    padding: var(--paddg-20);
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.nav {
+    background-color: rgb(0, 57, 150);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+}
+
+#attempts,
+#score {
+    padding: var(--paddg-20);
+    color: var(--clr);
+    font-size: 20px;
+}
+
+.nav>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav h1 {
+    color: var(--clr);
+    padding: var(--paddg-20);
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav span {
+    color: var(--clr);
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    width: 40%;
+    padding: 40px;
+    text-align: center;
+    margin-top: 5%;
+    background-color: var(--clr);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    padding: 20px;
+    width: 70%;
+}
+
+input {
+    padding: 5px 20px 5px 20px;
+}
+
+input[type="submit"] {
+    padding: 5px 20px 5px 20px;
+    margin-top: 10px;
+}
+
+#output {
+    display: none;
+}
+
+ul li {
+    color: rgb(20, 122, 217);
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: rgb(0, 80, 156);
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        width: 80%;
+    }
+}
+
+@media all and (min-width: 280px) and (max-width: 767px) {
+
+    .nav h1 {
+        font-size: 15px;
+    }
+
+    .main {
+        width: 97%;
+    }
+
+    input[type="text"] {
+        width: 30%;
+    }
+
+    #attempts,
+    #score {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
